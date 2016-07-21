@@ -1,0 +1,56 @@
+{
+  "uid" : "1f2bc250e98594c6",
+  "name" : "And navigates to Manage Transactions",
+  "title" : "And navigates to Manage Transactions",
+  "time" : {
+    "start" : 1469108007247,
+    "stop" : 1469108007270,
+    "duration" : 23
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "AssertionError: \nExpected: is \"blah!!\"\n     but: was \"mConsole - Administrative console\"",
+    "stackTrace" : "java.lang.AssertionError: \nExpected: is \"blah!!\"\n     but: was \"mConsole - Administrative console\"\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)\n\tat steps.applicationSteps.LandingPageSteps.User_logs_in_to_mConsole(LandingPageSteps.java:31)\n\tat ✽.And navigates to Manage Transactions(features/manageTransaction.feature:11)\n"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "1b88b6d50f1612c3",
+    "name" : "Login to mConsole",
+    "title" : "Login to mConsole"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "hojhas-MBP"
+  }, {
+    "name" : "thread",
+    "value" : "4643@hojhas-MBP.main(1)"
+  }, {
+    "name" : "suite-name",
+    "value" : "Login to mConsole"
+  }, {
+    "name" : "suite-title",
+    "value" : "Login to mConsole"
+  }, {
+    "name" : "story",
+    "value" : "Login to mConsole"
+  }, {
+    "name" : "feature",
+    "value" : "As a User"
+  }, {
+    "name" : "framework",
+    "value" : "CucumberJVM"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  } ],
+  "parameters" : [ ]
+}

@@ -1,0 +1,53 @@
+{
+  "uid" : "ac0b1d5fc67f25a2",
+  "name" : "Given user is on Login Page",
+  "title" : "Given user is on Login Page",
+  "time" : {
+    "start" : 1469107995811,
+    "stop" : 1469107995811,
+    "duration" : 0
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "1b88b6d50f1612c3",
+    "name" : "Login to mConsole",
+    "title" : "Login to mConsole"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "hojhas-MBP"
+  }, {
+    "name" : "thread",
+    "value" : "4643@hojhas-MBP.main(1)"
+  }, {
+    "name" : "suite-name",
+    "value" : "Login to mConsole"
+  }, {
+    "name" : "suite-title",
+    "value" : "Login to mConsole"
+  }, {
+    "name" : "story",
+    "value" : "Login to mConsole"
+  }, {
+    "name" : "feature",
+    "value" : "As a User"
+  }, {
+    "name" : "framework",
+    "value" : "CucumberJVM"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  } ],
+  "parameters" : [ ]
+}

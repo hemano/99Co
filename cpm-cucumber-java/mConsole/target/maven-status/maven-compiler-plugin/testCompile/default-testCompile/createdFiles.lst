@@ -1,0 +1,9 @@
+steps/StartingSteps.class
+domain/MyTests.class
+steps/RunCukesTest.class
+domain/UserDetails.class
+pages/LandingPage.class
+steps/applicationSteps/LandingPageSteps.class
+pages/LoginPage.class
+steps/GoogleTestSteps.class
+steps/applicationSteps/LoginPageSteps.class

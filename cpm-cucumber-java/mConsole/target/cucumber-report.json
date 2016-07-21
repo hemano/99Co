@@ -1,0 +1,173 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4863048574,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StartingSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Check the title after google search",
+        "description": "",
+        "id": "test-the-framework;check-the-title-after-google-search",
+        "after": [
+          {
+            "result": {
+              "duration": 304341,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StartingSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6304686340,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User finds the title relevant to search keyword",
+            "match": {
+              "location": "GoogleTestSteps.User_finds_the_title_relevant_to_search_keyword(UserDetails\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "searchKeyword",
+                  "firstName"
+                ],
+                "line": 6
+              },
+              {
+                "cells": [
+                  "Milk",
+                  "Amul"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "Butter",
+                  "Danone"
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@sanity"
+          }
+        ]
+      }
+    ],
+    "name": "Test the framework",
+    "description": "",
+    "id": "test-the-framework",
+    "keyword": "Feature",
+    "uri": "features/googleTest.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "User needs to be on the Login page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3984505197,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on Login Page",
+            "match": {
+              "location": "StartingSteps.User_logs_in_to_mConsole()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4817357919,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User logs in to mConsole",
+            "match": {
+              "location": "LoginPageSteps.User_logs_in_to_mConsole()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2404544887,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StartingSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Login to mConsole",
+        "description": "",
+        "id": "as-a-user;login-to-mconsole",
+        "after": [
+          {
+            "result": {
+              "duration": 164376549,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StartingSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6178220623,
+              "error_message": "java.lang.AssertionError: \nExpected: is \"blah!!\"\n     but: was \"mConsole - Administrative console\"\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)\n\tat steps.applicationSteps.LandingPageSteps.User_logs_in_to_mConsole(LandingPageSteps.java:31)\n\tat ✽.And navigates to Manage Transactions(features/manageTransaction.feature:11)\n",
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "navigates to Manage Transactions",
+            "match": {
+              "location": "LandingPageSteps.User_logs_in_to_mConsole()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "As a User",
+    "description": "I want to be able to see the Manage Transaction\nI should be able to filter Transactions",
+    "id": "as-a-user",
+    "keyword": "Feature",
+    "uri": "features/manageTransaction.feature"
+  }
+]
