@@ -1,6 +1,7 @@
 Feature: Test the framework
 
-  @sanity
+#  @sanity
+  @ignore
   Scenario: Check the title after google search
     Given User finds the title relevant to search keyword
           |searchKeyword|firstName|

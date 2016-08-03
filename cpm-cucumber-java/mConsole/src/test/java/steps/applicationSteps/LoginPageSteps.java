@@ -1,33 +1,41 @@
 package steps.applicationSteps;
 
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pages.LoginPage;
-import utils.DriverFactory;
+import ru.yandex.qatools.allure.annotations.Description;
+import ru.yandex.qatools.allure.annotations.Severity;
+import ru.yandex.qatools.allure.annotations.TestCaseId;
+import ru.yandex.qatools.allure.model.DescriptionType;
+import ru.yandex.qatools.allure.model.SeverityLevel;
+import utils.PropertyReader;
+import utils.driver.DriverFactory;
 
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by hemantojha on 21/07/16.
  */
 public class LoginPageSteps extends DriverFactory {
 
-//    WebDriver driver = new FirefoxDriver();
+    private static final Logger logger = LoggerFactory.getLogger(LandingPageSteps.class);
+
 
     @When("^User logs in to mConsole$")
     public void User_logs_in_to_mConsole() throws Throwable {
 
-        new LoginPage(driver).enterUserName("testadminuser").enterPassword("Abcd@12").andLogin();
+        String username = new PropertyReader().readProperty("userName");
+        String pwd = new PropertyReader().readProperty("password");
+
+        new LoginPage()
+                .enterUserName(username)
+                .enterPassword(pwd)
+                .andLogin();
 
         By manageTransactionBy = By.cssSelector("#manageTransactionBtn");
-        new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(manageTransactionBy));
 
-        System.out.println("driver.getTitle() = " + driver.getTitle());
+        System.out.println("driver.getTitle() = " + getDriver().getTitle());
 
     }
 

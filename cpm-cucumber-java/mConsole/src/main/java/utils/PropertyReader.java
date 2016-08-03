@@ -19,7 +19,7 @@ public class PropertyReader {
         loadProperties();
     }
 
-    private void loadProperties(){
+    private void loadProperties() {
         try {
 
             inputStream = this.getClass().getClassLoader().getResourceAsStream("config/mConsole.properties");

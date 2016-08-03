@@ -14,12 +14,17 @@ import org.junit.runner.RunWith;
 //    public class RunCukesTest extends AbstractTestNGCucumberTests {
 //
 //    }
-// TODO: 21/07/16  mvn test -Dcucumber.options="--tags @sanity"
+// TODO: 21/07/16  mvn clean test -Dcucumber.options="--tags @sanity"
+      /*mvn site
+      mvn jetty:run
+      (http://localhost:8080/)*/
+
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {"classpath:features"},
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber-report.json"},
-        glue = {})
+        glue = {},
+        tags = {"~@ignore"})
 public class RunCukesTest {
 }
 

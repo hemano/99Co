@@ -1,0 +1,12 @@
+<root>
+    <initialize-payment account="100059" client-id="10045">
+        <transaction order-no="970-911012" type-id="40">
+            <amount country-id="100">100</amount>
+        </transaction>
+        <client-info language="gb" version="1.28" platform="iOS/9.0">
+            <mobile operator-id="10000" country-id="100">1212124545</mobile>
+            <email>sandeep-dibs-visa@cmp.com</email>
+            <device-id>B4D54A3A4F5E4E1595F7A3BF16249F6D14555303</device-id>
+        </client-info>
+    </initialize-payment>
+</root>
