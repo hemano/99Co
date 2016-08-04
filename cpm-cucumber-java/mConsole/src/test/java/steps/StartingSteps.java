@@ -51,8 +51,9 @@ public class StartingSteps extends DriverFactory {
 
         try {
             new CommonPage().logout();
+
         } catch (Exception e) {
-            logger.error("Unable to Logout of the Application");
+            logger.error("Unable to Logout of the Application",e);
         }
 
         if (scenario.isFailed()) {
@@ -87,6 +88,19 @@ public class StartingSteps extends DriverFactory {
 
     }
 
+    @Before("@ios")
+    public void iOSTestsSetup() throws Exception {
+        logToReport("Executing the iOSTestSetup");
+        instantiateDriverObject();
+        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
+
+    @After("@ios")
+    public void apiMobileTest() throws Exception {
+        logToReport("Closing the iOS Driver session");
+        System.out.println("Executed after api test");
+        closeDriverObjects();
+    }
 
     private void userLogsInTOmConsole() throws Exception {
         String appURL = new PropertyReader().readProperty("AppURL");

@@ -8,5 +8,3 @@ Feature: As a User
     When User logs in to mConsole
     And User navigates to Manage Transactions
     Then User sees search option after entering number followed by + sign like "+457774441114" and click on it
-
-

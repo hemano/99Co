@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import pages.ios.HomePage;
 import utils.driver.DriverFactory;
 
 /**
@@ -33,6 +34,11 @@ public class CommonPage extends BasePageObject{
         displayNameLocator.click();
         sync.wait2().until(ExpectedConditions.visibilityOf(logoutLocator));
         logoutLocator.click();
+
+        logToReport("Waiting for the message after logout");
+        new LoginPage()
+                .getMessageAfterLogout();
+
         return new LoginPage();
     }
 

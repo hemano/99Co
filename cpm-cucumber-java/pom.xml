@@ -289,8 +289,7 @@
                         <properties>
                             <property>
                                 <name>listener</name>
-                                <!--<value>ru.yandex.qatools.allure.cucumberjvm.AllureRunListener</value>-->
-                                <value>listeners.CustomAllureListener</value>
+                                <value>utils.listeners.CustomAllureListener</value>
                             </property>
                         </properties>
 

@@ -17,7 +17,6 @@ public class WebDriverThread {
     private DriverType selectedDriverType;
 
     private final DriverType defaultDriverType = DriverType.FIREFOX_LOCAL;
-//    private final DriverType defaultDriverType = DriverType.FIREFOX;
 
     private String browser;
 
@@ -33,8 +32,8 @@ public class WebDriverThread {
         if (null == driver) {
 
             selectedDriverType = determineEffectiveDriverType();
-            DesiredCapabilities desiredCapabilities =
-            selectedDriverType.getDesiredCapabilities();
+            DesiredCapabilities desiredCapabilities = selectedDriverType.getDesiredCapabilities();
+
             instantiateWebDriver(desiredCapabilities);
         }
         return driver;

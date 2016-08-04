@@ -138,7 +138,7 @@ public enum DriverType implements DriverSetup {
             return new OperaDriver(capabilities);
         }
     },
-
+    //TODO  - we're now extending to Mobile automation, we can use driver instead of browser from pom.xml
     IOS_DRIVER {
         public DesiredCapabilities getDesiredCapabilities() {
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -154,7 +154,8 @@ public enum DriverType implements DriverSetup {
 
     public WebDriver getWebDriverObject(DesiredCapabilities capabilities) throws MalformedURLException {
 
-           return new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+            String appiumServerURL = new PropertyReader().readProperty("AppiumServerURL");
+           return new IOSDriver(new URL(appiumServerURL), capabilities);
     }
     }
 

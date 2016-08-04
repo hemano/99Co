@@ -1,16 +1,14 @@
 package steps.iOSAppSteps;
 
 import com.google.common.base.Optional;
-import gherkin.lexer.Ca;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.remote.HideKeyboardStrategy;
+import utils.listeners.WebDriverListeners;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
@@ -22,7 +20,9 @@ import java.util.concurrent.TimeUnit;
  */
 public class MBEApp {
 
-    AppiumDriver wd;
+    AppiumDriver driver;
+    EventFiringWebDriver wd;
+    WebDriverListeners eventListener;
 
     @Test
     public void testMobile() throws MalformedURLException {
@@ -35,12 +35,14 @@ public class MBEApp {
         capabilities.setCapability("app", "/Users/hemantojha/Documents/Cellpoint/mbeapp_3_12/MBE.app");
         capabilities.setCapability("autoAcceptAlerts", true);
 
-//        capabilities.setCapability("unicodekeyboard", true);
-//        capabilities.setCapability("resetkeyboard", true);
+        driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        wd = new EventFiringWebDriver(driver);
+        eventListener = new WebDriverListeners();
+        wd.register(eventListener);
 
 
-        wd = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-        wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wd.findElement(By.xpath("//*[@name='English']")).click();
 
         wd.findElement(By.xpath("//*[@name='My Profile']/UIAButton[1]")).click();

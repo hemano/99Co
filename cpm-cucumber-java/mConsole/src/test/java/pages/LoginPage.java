@@ -31,6 +31,11 @@ public class LoginPage extends BasePageObject{
     @FindBy(how = How.ID, using = "login")
     private WebElement loginButtonLocator;
 
+    @FindBy(how = How.ID, using = "infomessage")
+    private WebElement infoMessageLocator;
+
+
+
 
     public LoginPage enterUserName(String userName){
         logToReport(String.format("User is entering user name {%s}",userName));
@@ -55,6 +60,15 @@ public class LoginPage extends BasePageObject{
         String userName = new PropertyReader().readProperty("userName");
         String password = new PropertyReader().readProperty("password");
         this.enterUserName(userName).enterPassword(password).andLogin();
+    }
+
+    public WebElement getUserNameLocator(){
+        return sync.wait5().until(ExpectedConditions.visibilityOf(userNameLocator));
+    }
+
+    public String getMessageAfterLogout(){
+        sync.wait5().until(ExpectedConditions.visibilityOf(infoMessageLocator));
+        return infoMessageLocator.getText();
     }
 
 }
