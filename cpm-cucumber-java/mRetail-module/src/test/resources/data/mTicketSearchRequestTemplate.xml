@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<search control-no="100">
+    <origin>1062655</origin>
+    <destination>1062656</destination>
+    <time type="departure">2016-09-01T12:40:56.543</time>
+    <passengers>
+        <passenger id="1">1</passenger>
+    </passengers>
+    <compartment id="6">1</compartment>
+    <client-info language="gb" version="1.00" platform="iOS" app-id="4">
+        <mobile country-id="608">28882861</mobile>
+        <email>CPMtestcase@cellpointmobile.com</email>
+        <device-id>bfe5bb405cae88542e47d38d51e1e849</device-id>
+    </client-info>
+</search>
+</root>
